@@ -1,0 +1,202 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+header{
+  display: block;
+  background-image: url('colage/bg-2.jpg');
+  height: 760px;
+  width: 100%;
+  background-size: cover;
+}
+body {
+  font-size: 14px;
+  font-family: 'Comfortaa', cursive;
+  margin: 0;
+  padding: 0;
+  line-height: 20px;
+}
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+.brand {
+  font-family: 'Stardos Stencil', cursive;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: white;
+
+}
+.item {
+  font-weight: 600;
+  color: white;
+}
+.area {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  -webkit-box-align: stretch;
+          align-items: stretch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.list a:active{
+  line-height: 68px;
+  color: white;
+  border-bottom: 4px solid transparent;
+}
+
+@media (min-width: 768px) {
+  .area {
+    width: 750px;
+  }
+  .hairdressing-services__image img {
+    height: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .area {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .area {
+    width: 1140px;
+  }
+}
+.navbar-component {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background: rgba(75, 75, 75, 0.5);
+}
+.navbar-component > .navbar {
+  -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.navbar > .brand {
+  display: block;
+  font-size: 16px;
+  color: white;
+  margin: 22px;
+}
+.navbar > .toggle {
+  outline: none;
+  border: 0;
+  display: inline-block;
+  background-color: transparent;
+  background-image: none;
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 22px;
+}
+@media (min-width: 768px) {
+  .navbar > .toggle {
+    display: none;
+  }
+}
+.navbar > .toggle > .icon {
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.navbar > .toggle > .icon,
+.navbar > .toggle > .icon:before,
+.navbar > .toggle > .icon:after {
+  display: block;
+  width: 24px;
+  height: 3px;
+  -webkit-transition: background-color 0.3s linear, -webkit-transform 0.3s linear;
+  transition: background-color 0.3s linear, -webkit-transform 0.3s linear;
+  transition: background-color 0.3s linear, transform 0.3s linear;
+  transition: background-color 0.3s linear, transform 0.3s linear, -webkit-transform 0.3s linear;
+  background-color: white;
+}
+.navbar > .toggle > .icon:before,
+.navbar > .toggle > .icon:after {
+  position: absolute;
+  content: "";
+}
+.navbar > .toggle > .icon:before {
+  top: -8px;
+}
+.navbar > .toggle > .icon:after {
+  top: 8px;
+}
+.navbar > .toggle.-active > .icon {
+  background-color: transparent;
+}
+.navbar > .toggle.-active > .icon:before {
+  -webkit-transform: translateY(8px) rotate(45deg);
+          transform: translateY(8px) rotate(45deg);
+}
+.navbar > .toggle.-active > .icon:after {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+          transform: translateY(-8px) rotate(-45deg);
+}
+.navbar > .list {
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+          align-items: center;
+  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .navbar > .list {
+    display: -webkit-box;
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .navbar > .list {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    background: rgba(75, 75, 75, 0.5);;
+  }
+}
+.navbar > .list.-on {
+  display: -webkit-box;
+  display: block;
+}
+.navbar > .list > .item {
+  display: block;
+  flex-shrink: 0;
+  height: 64px;
+  line-height: 64px;
+  padding-left: 22px;
+  padding-right: 22px;
+  text-transform: uppercase;
+  color: #555;
+  font-size: 14px;
+}
+.navbar > .list > .item.-link {
+  line-height: 68px;
+  color: white;
+  border-bottom: 4px solid transparent;
+}
+.navbar > .list > .item.-link.-active,
+.navbar > .list > .item.-link:hover,
+.navbar > .list > .item.-link:focus {
+  color: #0CFCA4;
+  border-bottom-color: #0CFCA4;
+}
+
